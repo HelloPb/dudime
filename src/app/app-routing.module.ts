@@ -8,7 +8,6 @@ const route: Routes = [
   { path: '', component: HomeComponent },
 
   { path: 'content',
-    component: ContentAreaComponent,
     loadChildren : 'app/dev/shared/content/content.module#ContentModule'
   }
 ];
