@@ -1,8 +1,9 @@
 import { UserRoutingModule } from './user-routing.module';
-import { AddUserComponent } from './add-user/add-user.component';
-import { SearchUserComponent } from './search-user/search-user.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AddUserComponent } from './addedit/add-user.component';
+import { SearchUserComponent } from './list/search-user.component';
+import { UserManagementComponent } from './user-management.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
     AddUserComponent,
-    SearchUserComponent]
+    SearchUserComponent,
+    UserManagementComponent]
 })
 export class UserModule { }
