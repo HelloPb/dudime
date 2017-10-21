@@ -1,13 +1,16 @@
+import { RouterModule } from '@angular/router';
+import { ContentAreaComponent } from '../content/content-area.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContentAreaComponent } from './content-area/content-area.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
-  declarations: [ContentAreaComponent, TopMenuComponent, LeftMenuComponent]
+  declarations: [TopMenuComponent, LeftMenuComponent],
+  exports: [TopMenuComponent, LeftMenuComponent]
 })
 export class MenuModule { }

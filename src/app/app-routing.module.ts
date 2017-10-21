@@ -7,8 +7,9 @@ import { ContentAreaComponent } from './dev/shared/content/content-area.componen
 const route: Routes = [
   { path: '', component: HomeComponent },
 
-  { path: 'content',
-    loadChildren : 'app/dev/shared/content/content.module#ContentModule'
+  {
+    path: 'content',
+    loadChildren: 'app/dev/shared/content/content.module#ContentModule'
   }
 ];
 
@@ -19,4 +20,4 @@ const route: Routes = [
   ],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class AppRoutingModule { }
