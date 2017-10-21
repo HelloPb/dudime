@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,12 +10,16 @@ const routes: Routes = [
     component: ContentAreaComponent,
     children: [
       {
+        path: '',
+        component: HomeComponent
+      },
+      {
         path: 'user',
-        loadChildren: 'app/dev/features/userManagement/user.module#UserModule'
+        loadChildren: 'app/dev/content/features/profile-users/profile-users.module#ProfileUsersModule'
       },
       {
         path: 'products',
-        loadChildren: 'app/dev/features/products/products.module#ProductsModule'
+        loadChildren: 'app/dev/content/features/profile-products/profile-products.module#ProfileProductsModule'
       }
     ]
   }

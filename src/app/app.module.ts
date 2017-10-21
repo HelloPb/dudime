@@ -1,11 +1,10 @@
 import { MenuModule } from './dev/menu/menu.module';
-import { HomeModule } from './dev/home/home.module';
-import { UserModule } from './dev/features/userManagement/user.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContentModule } from './dev/content/content.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    HomeModule,
     MenuModule,
+    ContentModule,
     AppRoutingModule
   ],
   providers: [],
