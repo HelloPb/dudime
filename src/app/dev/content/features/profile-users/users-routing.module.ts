@@ -1,6 +1,5 @@
 import { ProfileUsersResolverService } from './users-resolver.service';
 import { ProfileUsersComponent } from './users.component';
-import { SearchUserComponent } from './search-user/search-user.component';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -13,16 +12,17 @@ const routes: Routes = [
     component: ProfileUsersComponent,
     children: [
       {
-        path: '', redirectTo: 'search'
+        path: '', redirectTo: 'add'
       },
       {
-        path: 'search',
-        component: SearchUserComponent
-      },
-      {
-        path: 'addedit',
+        path: 'add',
         component: AddEditUserComponent,
-        resolve: { boolean: ProfileUsersResolverService },
+        canDeactivate: [CanDeactivateGuardService]
+      },
+      {
+        path: ':id',
+        component: AddEditUserComponent,
+        resolve: { userProfile: ProfileUsersResolverService },
         canDeactivate: [CanDeactivateGuardService]
       }
     ]
