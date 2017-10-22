@@ -1,9 +1,12 @@
+import { ProfileUsersResolverService } from './profile-users-resolver.service';
+import { resolve } from 'path';
 import { SearchUserComponent } from './search-user/search-user.component';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 import { ProfileUsersComponent } from './profile-users.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CanDeactivateGuardService } from '../shared/services/auth/can-deactivate-guard/can-deactivate-guard.service';
 
 const routes: Routes = [
   {
@@ -19,7 +22,9 @@ const routes: Routes = [
       },
       {
         path: 'addedit',
-        component: AddEditUserComponent
+        component: AddEditUserComponent,
+        resolve: { boolean: ProfileUsersResolverService },
+        canDeactivate: [CanDeactivateGuardService]
       }
     ]
   }

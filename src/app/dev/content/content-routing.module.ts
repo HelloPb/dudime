@@ -1,3 +1,4 @@
+import { CanActivateGuardService } from './features/shared/services/auth/can-activate-guard/can-activate-guard.service';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -20,8 +21,12 @@ const routes: Routes = [
       {
         path: 'products',
         loadChildren: 'app/dev/content/features/profile-products/profile-products.module#ProfileProductsModule'
-      }
-    ]
+      },
+      {
+        path: 'admin',
+        canLoad: [CanActivateGuardService],
+        loadChildren: 'app/dev/content/features/admin/admin.module#AdminModule'
+      }]
   }
 ];
 
