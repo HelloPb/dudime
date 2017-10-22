@@ -1,6 +1,5 @@
+import { ProductStandardProfileComponent } from './standard-profile.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ProductStandardProfileComponent } from './product-standard-profile.component';
 
 describe('ProductStandardProfileComponent', () => {
   let component: ProductStandardProfileComponent;

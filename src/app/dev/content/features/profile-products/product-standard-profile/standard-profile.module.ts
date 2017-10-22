@@ -1,6 +1,6 @@
+import { ProductStandardProfileComponent } from './standard-profile.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileProductsComponent } from './profile-products.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -8,6 +8,6 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  declarations: [ProfileProductsComponent]
+  declarations: [ProductStandardProfileComponent]
 })
-export class ProfileProductsModule { }
+export class ProductStandardProfileModule { }

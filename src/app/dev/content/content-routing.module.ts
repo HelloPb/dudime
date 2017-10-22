@@ -16,11 +16,11 @@ const routes: Routes = [
       },
       {
         path: 'user',
-        loadChildren: 'app/dev/content/features/profile-users/profile-users.module#ProfileUsersModule'
+        loadChildren: 'app/dev/content/features/profile-users/users.module#ProfileUsersModule'
       },
       {
         path: 'products',
-        loadChildren: 'app/dev/content/features/profile-products/profile-products.module#ProfileProductsModule'
+        loadChildren: 'app/dev/content/features/profile-products/products.module#ProfileProductsModule'
       },
       {
         path: 'admin',

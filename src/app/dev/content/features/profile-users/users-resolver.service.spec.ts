@@ -1,6 +1,6 @@
+import { ProfileUsersResolverService } from './users-resolver.service';
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ProfileUsersResolverService } from './profile-users-resolver.service';
 
 describe('ProfileUsersResolverService', () => {
   beforeEach(() => {

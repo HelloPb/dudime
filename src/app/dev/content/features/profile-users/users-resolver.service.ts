@@ -1,6 +1,6 @@
+import { ProfileUsersService } from './users.service';
 import { Observable } from 'rxjs/Rx';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
-import { ProfileUsersService } from './profile-users.service';
 import { HttpWrap } from '../shared/services/http/http-wrap.service';
 import { Injectable } from '@angular/core';
 

@@ -1,4 +1,4 @@
-import { ProfileProductsComponent } from './profile-products.component';
+import { ProfileProductsComponent } from './products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,12 +14,12 @@ const routes: Routes = [
       {
         path: 'standard',
         loadChildren: 'app/dev/content/features/profile-products/product-standard-profile/\
-        product-standard-profile.module#ProductStandardProfileModule'
+        standard-profile.module#ProductStandardProfileModule'
       },
       {
         path: 'specific',
         loadChildren: 'app/dev/content/features/profile-products/product-specific-profiles/\
-        product-specific-profiles.module#ProductSpecificProfilesModule'
+        specific-profiles.module#ProductSpecificProfilesModule'
       }
     ]
   }

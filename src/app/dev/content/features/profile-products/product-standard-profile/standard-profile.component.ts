@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-standard-profile',
-  templateUrl: './product-standard-profile.component.html',
-  styleUrls: ['./product-standard-profile.component.css']
+  templateUrl: './standard-profile.component.html',
+  styleUrls: ['./standard-profile.component.css']
 })
 export class ProductStandardProfileComponent implements OnInit {
 

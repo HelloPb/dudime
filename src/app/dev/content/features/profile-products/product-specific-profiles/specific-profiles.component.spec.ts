@@ -1,6 +1,5 @@
+import { ProductSpecificProfilesComponent } from './specific-profiles.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ProductSpecificProfilesComponent } from './product-specific-profiles.component';
 
 describe('ProductSpecificProfilesComponent', () => {
   let component: ProductSpecificProfilesComponent;
