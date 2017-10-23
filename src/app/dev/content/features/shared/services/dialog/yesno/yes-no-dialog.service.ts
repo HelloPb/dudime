@@ -8,7 +8,7 @@ export class YesNoDialogService {
 
   confirm(message: string): Observable<boolean> {
 
-    const truthy = new Observable<boolean>(x => x.next(true));
+    const truthy = new Observable<boolean>(x => { x.next(true); x.complete(); });
 
     return truthy;
   }

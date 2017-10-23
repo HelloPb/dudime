@@ -12,7 +12,7 @@ const routes: Routes = [
     component: ProfileUsersComponent,
     children: [
       {
-        path: '', redirectTo: 'add'
+        path: '', redirectTo: 'id'
       },
       {
         path: 'add',

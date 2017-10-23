@@ -1,3 +1,4 @@
+import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,6 +9,7 @@ import { ContentAreaComponent } from './content-area.component';
   imports: [
     CommonModule,
     HomeModule,
+    MenuModule,
     ContentRoutingModule
   ],
   declarations: [ContentAreaComponent]

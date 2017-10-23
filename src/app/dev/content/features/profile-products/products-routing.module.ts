@@ -1,3 +1,4 @@
+import { SearchProductComponent } from './search-product/search-product.component';
 import { ProfileProductsComponent } from './products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -9,16 +10,20 @@ const routes: Routes = [
     component: ProfileProductsComponent,
     children: [
       {
-        path: '', redirectTo: 'standard'
+        path: '', redirectTo: 'search'
+      },
+      {
+        path: 'search',
+        component: SearchProductComponent
       },
       {
         path: 'standard',
-        loadChildren: 'app/dev/content/features/profile-products/product-standard-profile/\
+        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-standard-profile/\
         standard-profile.module#ProductStandardProfileModule'
       },
       {
         path: 'specific',
-        loadChildren: 'app/dev/content/features/profile-products/product-specific-profiles/\
+        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-specific-profiles/\
         specific-profiles.module#ProductSpecificProfilesModule'
       }
     ]
