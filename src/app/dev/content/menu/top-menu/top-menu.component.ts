@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
+  private product: string;
   constructor() { }
 
   ngOnInit() {
+    this.product = 'All Near';
   }
 
 }
