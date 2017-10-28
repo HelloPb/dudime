@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
-    path: 'products',
+    path: '',
     component: ManageProductsComponent,
     children: [
       {

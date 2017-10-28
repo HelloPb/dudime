@@ -7,7 +7,7 @@ import { ContentAreaComponent } from './content-area.component';
 
 const routes: Routes = [
   {
-    path: 'content',
+    path: '',
     component: ContentAreaComponent,
     children: [
       {

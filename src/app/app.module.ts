@@ -20,7 +20,6 @@ import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.compo
   ],
   imports: [
     BrowserModule,
-    ContentModule,
     AppRoutingModule
   ],
   providers: [CanActivateGuardService, AuthService, YesNoDialogService],

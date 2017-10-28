@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductStandardProfileComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
-
-    console.log(this.activatedRoute);
+    console.log(this.route);
     console.log(this.router);
   }
 
