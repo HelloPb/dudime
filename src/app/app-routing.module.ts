@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.component';
 import { RegisterComponent } from './dev/register/register.component';
 import { LoginComponent } from './dev/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,6 +20,10 @@ const route: Routes = [
   {
     path: 'content',
     loadChildren: 'app/dev/content/content.module#ContentModule'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

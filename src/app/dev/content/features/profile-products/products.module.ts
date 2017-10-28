@@ -1,3 +1,6 @@
+import { ProductSpecificProfilesModule } from './add-edit-product/product-specific-profiles/specific-profiles.module';
+import { ProductStandardProfileModule } from './add-edit-product/product-standard-profile/standard-profile.module';
+import { ProfileProductsRoutingModule } from './products-routing.module';
 import { ProfileProductsComponent } from './products.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +10,9 @@ import { SearchProductComponent } from './search-product/search-product.componen
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    ProductStandardProfileModule,
+    ProductSpecificProfilesModule,
+    ProfileProductsRoutingModule
   ],
   declarations: [ProfileProductsComponent, SearchProductComponent]
 })

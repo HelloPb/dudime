@@ -7,7 +7,7 @@ import { ContentAreaComponent } from './content-area.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'content',
     component: ContentAreaComponent,
     children: [
       {
@@ -15,7 +15,7 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path: 'user',
+        path: 'users',
         loadChildren: 'app/dev/content/features/profile-users/users.module#ProfileUsersModule'
       },
       {

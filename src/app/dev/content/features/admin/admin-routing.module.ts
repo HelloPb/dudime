@@ -6,10 +6,6 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'admin'
-  },
-  {
     path: 'admin',
     component: AdminComponent,
     children: [

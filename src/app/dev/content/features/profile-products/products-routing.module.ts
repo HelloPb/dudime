@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'products',
     component: ProfileProductsComponent,
     children: [
       {
-        path: '', redirectTo: 'search'
+        path: '', redirectTo: 'standard'
       },
       {
         path: 'search',
@@ -18,13 +18,11 @@ const routes: Routes = [
       },
       {
         path: 'standard',
-        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-standard-profile/\
-        standard-profile.module#ProductStandardProfileModule'
+        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-standard-profile/standard-profile.module#ProductStandardProfileModule'
       },
       {
         path: 'specific',
-        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-specific-profiles/\
-        specific-profiles.module#ProductSpecificProfilesModule'
+        loadChildren: 'app/dev/content/features/profile-products/add-edit-product/product-specific-profiles/specific-profiles.module#ProductSpecificProfilesModule'
       }
     ]
   }

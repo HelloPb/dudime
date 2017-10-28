@@ -9,12 +9,14 @@ import { ContentModule } from './dev/content/content.module';
 import { LoginComponent } from './dev/login/login.component';
 import { RegisterComponent } from './dev/register/register.component';
 import { CanActivateGuardService } from './dev/content/features/shared/services/auth/can-activate-guard/can-activate-guard.service';
+import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

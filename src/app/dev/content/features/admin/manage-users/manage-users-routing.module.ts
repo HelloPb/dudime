@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'users',
     component: ManageUsersComponent,
     children: [
       {

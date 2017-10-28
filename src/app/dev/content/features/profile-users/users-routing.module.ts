@@ -8,7 +8,7 @@ import { CanDeactivateGuardService } from '../shared/services/auth/can-deactivat
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'users',
     component: ProfileUsersComponent,
     children: [
       {
