@@ -13,8 +13,6 @@ export class ProductStandardProfileComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    console.log(this.route);
-    console.log(this.router);
   }
 
 }

@@ -6,10 +6,6 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'standard'
-  },
-  {
-    path: 'standard',
     component: ProductStandardProfileComponent
   }
 ];
