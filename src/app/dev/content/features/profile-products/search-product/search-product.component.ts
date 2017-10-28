@@ -1,3 +1,5 @@
+import { UserCultureService } from '../../shared/services/culture/user-culture/user-culture.service';
+import { CountryCultureService } from '../../shared/services/culture/country-culture/country-culture.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchProductComponent implements OnInit {
 
-  constructor() { }
+  constructor
+    (
+    private countryCultureService: CountryCultureService,
+    private userCultureService: UserCultureService
+    ) {
+
+  }
 
   ngOnInit() {
   }

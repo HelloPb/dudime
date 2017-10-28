@@ -1,3 +1,9 @@
+import { UserCultureService } from './dev/content/features/shared/services/culture/user-culture/user-culture.service';
+import { HttpModule } from '@angular/http';
+import { HttpWrap } from './dev/content/features/shared/services/http/http-wrap.service';
+import {
+  CountryCultureService,
+} from './dev/content/features/shared/services/culture/country-culture/country-culture.service';
 import { YesNoDialogService } from './dev/content/features/shared/services/dialog/yesno/yes-no-dialog.service';
 import { AuthService } from './dev/content/features/shared/services/auth/authservice/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,9 +26,10 @@ import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [CanActivateGuardService, AuthService, YesNoDialogService],
+  providers: [HttpWrap, CanActivateGuardService, AuthService, YesNoDialogService, CountryCultureService, UserCultureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

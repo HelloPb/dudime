@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class TopMenuComponent implements OnInit {
 
   private product: string;
-  constructor() { }
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.product = 'All Near';
+  }
+
+  private search(): void {
+    this.router.navigate([`/content/products/search`]);
   }
 
 }
