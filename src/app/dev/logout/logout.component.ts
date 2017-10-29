@@ -3,20 +3,17 @@ import { selector } from 'rxjs/operator/publish';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-left-menu',
-  templateUrl: './left-menu.component.html',
-  styleUrls: ['./left-menu.component.css']
+  selector: 'app-logout',
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.css']
 })
-export class LeftMenuComponent implements OnInit {
+export class LogoutComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
-  }
-
-  private search(): void {
-    this.router.navigate([`/content/products/search`]);
+    return this.router.navigate(['/login', { message: 'You are logged out. Do you want to login again?' }]);
   }
 }

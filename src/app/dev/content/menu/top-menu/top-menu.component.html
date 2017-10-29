@@ -2,7 +2,7 @@
   <a class="navbar-brand" href="#">
     <img src="../../../../../favicon.ico">
   </a>
-  <a class="nav-link" href="#">Add Store
+  <a class="nav-link" routerLink="/content/products/standard">Add Store
     <span class="sr-only">(current)</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent"
@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent1">
     <ul class="navbar-nav w-100">
       <li class="nav-item active">
-        <a class="nav-link" href="#">My Store
+        <a class="nav-link" routerLink="/content/mystore">My Store
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -23,9 +23,9 @@
           Profile
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" routerLink="/content/users/1">Settings</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" routerLink="/logout">Logout</a>
         </div>
       </li>
     </ul>
@@ -39,7 +39,7 @@
         <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search Stores" aria-label="Search">
       </div>
       <div class="col col-auto">
-        <button class="btn btn-outline-danger" type="submit">Search</button>
+        <button class="btn btn-outline-danger" type="button" (click)="search()">Search</button>
       </div>
     </div>
   </form>

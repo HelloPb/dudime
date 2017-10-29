@@ -23,6 +23,10 @@ const routes: Routes = [
         loadChildren: 'app/dev/content/features/profile-products/products.module#ProfileProductsModule'
       },
       {
+        path: 'mystore',
+        loadChildren: 'app/dev/content/features/my-store/my-store.module#MyStoreModule'
+      },
+      {
         path: 'admin',
         canLoad: [CanActivateGuardService],
         loadChildren: 'app/dev/content/features/admin/admin.module#AdminModule'

@@ -1,3 +1,4 @@
+import { ProfileUsersRoutingModule } from './users-routing.module';
 import { ProfileUsersComponent } from './users.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,7 +9,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    ProfileUsersRoutingModule
   ],
   declarations: [ProfileUsersComponent, AddEditUserComponent, SearchUserComponent]
 })

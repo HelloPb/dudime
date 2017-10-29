@@ -21,5 +21,4 @@ export class TopMenuComponent implements OnInit {
   private search(): void {
     this.router.navigate([`/content/products/search`]);
   }
-
 }

@@ -12,7 +12,7 @@ const routes: Routes = [
     component: ProfileUsersComponent,
     children: [
       {
-        path: '', redirectTo: 'id'
+        path: '', redirectTo: 'add'
       },
       {
         path: 'add',
@@ -22,8 +22,8 @@ const routes: Routes = [
       {
         path: ':id',
         component: AddEditUserComponent,
-        resolve: { userProfile: ProfileUsersResolverService },
-        canDeactivate: [CanDeactivateGuardService]
+        // resolve: { userProfile: ProfileUsersResolverService },
+        // canDeactivate: [CanDeactivateGuardService]
       }
     ]
   }

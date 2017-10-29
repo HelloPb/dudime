@@ -16,13 +16,15 @@ import { LoginComponent } from './dev/login/login.component';
 import { RegisterComponent } from './dev/register/register.component';
 import { CanActivateGuardService } from './dev/content/features/shared/services/auth/can-activate-guard/can-activate-guard.service';
 import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.component';
+import { LogoutComponent } from './dev/logout/logout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

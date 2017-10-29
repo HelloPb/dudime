@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditUserComponent implements OnInit, CanComponentDeactivate {
 
-  private edited = true;
+  private edited = false;
 
   constructor(private dialogService: YesNoDialogService) { }
 
@@ -19,7 +19,7 @@ export class AddEditUserComponent implements OnInit, CanComponentDeactivate {
 
   canDeactivate(): Observable<boolean> | boolean {
     // Allow synchronous navigation (`true`) if no crisis or the crisis is unchanged
-    if (this.edited) {
+    if (!this.edited) {
       return true;
     }
     // Otherwise ask the user with the dialog service and return its
