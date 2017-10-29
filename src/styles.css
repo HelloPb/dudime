@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.zb-menu-header-1 {
+    background-color: brown!important;    
+}
+
+.zb-menu-header-1 .dropdown-menu {
+    background-color:  brown!important; 
+}
+
+.zb-menu-header-2 {
+    background-color: indianred!important;    
+}
+
+.zb-menu-header-1 a,
+.zb-menu-header-2 a,
+.zb-menu-header-2 button {
+    color: white!important;
+}
+.zb-menu-header-1 a:hover,
+.zb-menu-header-2 a:hover,
+.zb-menu-header-2 button:hover {
+    background-color:brown;
+}
+.zb-menu-header-2 button {
+    border-color: white!important;
+}
+
+.zb-menu.button {
+    color: white!important;
+    background-color:indianred;
+    border-color: white!important;
+}
+.zb-menu.button:hover {
+    background-color:brown;
+}
