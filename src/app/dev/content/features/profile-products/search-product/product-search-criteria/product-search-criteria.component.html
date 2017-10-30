@@ -1,0 +1,20 @@
+<div class="alert alert-success px-5" role="alert">
+  <span id="applyFilters">Apply Filters</span>
+  <small id="applyFiltersHelp" class="form-text text-muted">Filter options changes based on search item</small>
+</div>
+
+<form> 
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p class="mb-1">Distance Range</p> 
+      <input type="range" class="w-100" aria-describedby="distanceRangeHelp">
+      <small id="distanceRangeHelp" class="form-text text-muted">Distance based on your present location.</small>
+    </li>
+    <li class="list-group-item">
+      <p class="mb-1">Price Range</p>   
+      <input type="range" class="w-100" aria-describedby="priceRangeHelp">
+      <small id="priceRangeHelp" class="form-text text-muted">Prices based on available stock</small>
+    </li> 
+  </ul>
+  <button class="btn btn-outline-success my-2 my-sm-0 btn-block zb-menu button" type="button" (click)="search()">Submit</button>
+</form>

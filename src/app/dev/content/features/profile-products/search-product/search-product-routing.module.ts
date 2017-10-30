@@ -1,12 +1,12 @@
+import { SearchProductComponent } from './search-product.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MyStoreComponent } from './my-store.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
     path: '',
-    component: MyStoreComponent
+    component: SearchProductComponent
   }
 ];
 
@@ -17,4 +17,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class MyStoreRouterModule { }
+export class SearchProductRoutingModule { }

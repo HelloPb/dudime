@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { ProductSearchResultComponent } from './search-product/product-search-result/product-search-result.component';
+import { ProductSearchCriteriaComponent } from './search-product/product-search-criteria/product-search-criteria.component';
 
 @NgModule({
   imports: [
@@ -14,6 +16,6 @@ import { SearchProductComponent } from './search-product/search-product.componen
     ProductSpecificProfilesModule,
     ProfileProductsRoutingModule
   ],
-  declarations: [ProfileProductsComponent, SearchProductComponent]
+  declarations: [ProfileProductsComponent]
 })
 export class ProfileProductsModule { }

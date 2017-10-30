@@ -10,11 +10,11 @@ const routes: Routes = [
     component: ProfileProductsComponent,
     children: [
       {
-        path: '', redirectTo: 'standard'
+        path: '', redirectTo: 'search'
       },
       {
         path: 'search',
-        component: SearchProductComponent
+        loadChildren: 'app/dev/content/features/profile-products/search-product/search-product.module#SearchProductModule'
       },
       {
         path: 'standard',
