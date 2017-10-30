@@ -1,3 +1,5 @@
+import { ProfileUsersService } from './dev/content/features/profile-users/users.service';
+import { ProfileUsersResolverService } from './dev/content/features/profile-users/users-resolver.service';
 import { UserCultureService } from './dev/content/features/shared/services/culture/user-culture/user-culture.service';
 import { HttpModule } from '@angular/http';
 import { HttpWrap } from './dev/content/features/shared/services/http/http-wrap.service';
@@ -31,7 +33,16 @@ import { LogoutComponent } from './dev/logout/logout.component';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [HttpWrap, CanActivateGuardService, AuthService, YesNoDialogService, CountryCultureService, UserCultureService],
+  providers: [
+    HttpWrap,
+    CanActivateGuardService,
+    AuthService,
+    YesNoDialogService,
+    CountryCultureService,
+    UserCultureService,
+    ProfileUsersResolverService,
+    ProfileUsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

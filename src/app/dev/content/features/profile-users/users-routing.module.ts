@@ -12,18 +12,15 @@ const routes: Routes = [
     component: ProfileUsersComponent,
     children: [
       {
-        path: '', redirectTo: 'add'
+        path: '', redirectTo: 'addedit'
       },
       {
-        path: 'add',
-        component: AddEditUserComponent,
-        canDeactivate: [CanDeactivateGuardService]
+        path: 'addedit',
+        loadChildren: 'app/dev/content/features/profile-users/add-edit-user/add-edit-user.module#AddEditUserModule'
       },
       {
-        path: ':id',
-        component: AddEditUserComponent,
-        // resolve: { userProfile: ProfileUsersResolverService },
-        // canDeactivate: [CanDeactivateGuardService]
+        path: 'search',
+        loadChildren: 'app/dev/content/features/profile-users/search-user/search-user.module#SearchUserModule'
       }
     ]
   }

@@ -10,7 +10,6 @@ import { MyStoreComponent } from './my-store.component';
     CommonModule,
     MyStoreRouterModule
   ],
-  declarations: [MyStoreComponent, MyStoreSearchCriteriaComponent, MyStoreSearchResultComponent],
-  exports: [MyStoreRouterModule]
+  declarations: [MyStoreComponent, MyStoreSearchCriteriaComponent, MyStoreSearchResultComponent]
 })
 export class MyStoreModule { }
