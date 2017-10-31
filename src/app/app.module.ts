@@ -1,3 +1,4 @@
+import { ValidationService } from './dev/content/features/shared/services/validation/validation.service';
 import { ProfileUsersService } from './dev/content/features/profile-users/users.service';
 import { ProfileUsersResolverService } from './dev/content/features/profile-users/users-resolver.service';
 import { UserCultureService } from './dev/content/features/shared/services/culture/user-culture/user-culture.service';
@@ -19,6 +20,7 @@ import { RegisterComponent } from './dev/register/register.component';
 import { CanActivateGuardService } from './dev/content/features/shared/services/auth/can-activate-guard/can-activate-guard.service';
 import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.component';
 import { LogoutComponent } from './dev/logout/logout.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { LogoutComponent } from './dev/logout/logout.component';
     LogoutComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpModule
@@ -41,7 +44,8 @@ import { LogoutComponent } from './dev/logout/logout.component';
     CountryCultureService,
     UserCultureService,
     ProfileUsersResolverService,
-    ProfileUsersService
+    ProfileUsersService,
+    ValidationService
   ],
   bootstrap: [AppComponent]
 })

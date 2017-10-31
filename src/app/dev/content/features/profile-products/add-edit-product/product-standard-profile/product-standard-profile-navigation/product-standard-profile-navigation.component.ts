@@ -1,3 +1,4 @@
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductStandardProfileNavigationComponent implements OnInit {
 
-  constructor() { }
+  private formGroup: FormGroup;
 
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+    this.create();
+  }
+
+  private create(): void {
+    this.formGroup = this.formBuilder.group({
+      time: ['10:00', Validators.required]
+    });
+  }
+
+  // Angular Lifecycle Hooks
   ngOnInit() {
   }
 
