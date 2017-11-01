@@ -1,5 +1,5 @@
 import { RegexParser } from '../../../../utils/regex-parser';
-import { Subscription } from 'rxjs/Rx';
+import { Observable, Subscription } from 'rxjs/Rx';
 import { TimePicker } from '../../../../models/date-time/time-picker';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
@@ -24,19 +24,14 @@ export class TimePickerComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   private valueChanges(): void {
-    if (this.time == null) {
-      return;
-    }
-    this.subsription = this.time.valueChanges.subscribe(this.setTimestamp);
+    this.time.setValue(`${this.timestamp.hour}:${this.timestamp.minute}`);
   }
 
   private setTimestamp(src: string): void {
     this.timestamp = RegexParser.getTimeStamp(src);
   }
 
-  // Angular Lifecyle Hooks
   public ngOnInit(): void {
-    this.valueChanges();
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
@@ -44,8 +39,6 @@ export class TimePickerComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   private handleInputChanges(changes: SimpleChanges) {
-    // input is an observable form control and
-    // it is subscribed in valueChanges() function. So no need to look for change events in this method
     for (const propName in changes) {
       if (changes.hasOwnProperty(propName)) {
         const chng = changes[propName];
@@ -58,6 +51,5 @@ export class TimePickerComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    this.subsription.unsubscribe();
   }
 }

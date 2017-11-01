@@ -40,66 +40,21 @@
     </label>
   </div>
 
-  <div class="row align-items-center no-gutters">
-    <div class="col col-auto">
-      <div class="btn-group d-block" data-toggle="buttons">
-        <label class="btn btn-secondary product-weekdays">
-          <input type="checkbox" checked autocomplete="off">Sun
-        </label>
-      </div>
-    </div>
-    <div class="col col-auto">
-      <app-time-picker class="col" [time]="formGroup.get('time')"></app-time-picker>
-    </div>
-    <div class="col col-auto">
-      to
-    </div>
-    <div class="col col-auto">
-      <app-time-picker class="col" [time]="formGroup.get('time')"></app-time-picker>
-    </div>
-  </div>
-
-  <div class="row align-items-center no-gutters">
-    <div class="col col-auto">
-      <div class="btn-group d-block" data-toggle="buttons">
-        <label class="btn btn-secondary product-weekdays">
-          <input type="checkbox" checked autocomplete="off">Sun
-        </label>
-      </div>
-    </div>
-    <div class="col col-auto">
-      <div formArrayName="sun">
-        <div *ngFor="let timeRange of sun.controls; let i=index" [formGroupName]="i">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">From</th>
-                <th scope="col">To</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td><button (click)="editTimeRange(timeRange, content)">+</button></td>
-                <td>x</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <app-week-days-bussiness-hours [day]="{ name: 'Sun', data: formGroup.get('sun')}"></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Mon', data: formGroup.get('mon')}" ></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Tue', data: formGroup.get('tue')}" ></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Wed', data: formGroup.get('wed')}" ></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Thu', data: formGroup.get('thu')}" ></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Fri', data: formGroup.get('fri')}" ></app-week-days-bussiness-hours>
+  <app-week-days-bussiness-hours [day]="{ name: 'Sat', data: formGroup.get('sat')}" ></app-week-days-bussiness-hours>
+  
   <div class="form-row">
     <div class="form-group col">
       <label for="productFromDate">From Date</label>
       <input type="text" class="form-control" id="productFromDate" placeholder="From Date">
     </div>
   </div>
-
+  
   <div class="form-check">
     <label class="form-check-label">
       <input class="form-check-input" type="checkbox" value="true" checked> Valid until I cancel.
@@ -150,36 +105,8 @@
       <label for="inputZip">Zip</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
-
   </div>
 
   <button type="submit" class="btn btn-primary">Next</button>
 
 </form>
-
-<ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <form [formGroup]="timeRangeFormGroup" novalidate>
-      <div class="row">
-        <div class="col col-auto">
-          <app-time-picker class="col" [time]="timeRangeFormGroup.get('from')"></app-time-picker>
-        </div>
-        <div class="col col-auto">
-          to
-        </div>
-        <div class="col col-auto">
-          <app-time-picker class="col" [time]="timeRangeFormGroup.get('to')"></app-time-picker>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
-  </div>
-</ng-template>

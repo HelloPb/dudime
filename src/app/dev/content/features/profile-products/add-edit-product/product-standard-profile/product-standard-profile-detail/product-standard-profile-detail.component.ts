@@ -16,8 +16,6 @@ import { Component, OnInit } from '@angular/core';
 export class ProductStandardProfileDetailComponent implements OnInit {
 
   private formGroup: FormGroup;
-  private closeResult: string;
-  private timeRangeFormGroup: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,13 +28,23 @@ export class ProductStandardProfileDetailComponent implements OnInit {
   private create(): void {
 
     this.formGroup = this.formBuilder.group({
-      sun: this.formBuilder.array([])
+      sun: this.formBuilder.array([]),
+      mon: this.formBuilder.array([]),
+      tue: this.formBuilder.array([]),
+      wed: this.formBuilder.array([]),
+      thu: this.formBuilder.array([]),
+      fri: this.formBuilder.array([]),
+      sat: this.formBuilder.array([])
     });
 
-    this.formGroup.setControl('sun', this.setTimeRangeForm(
-      [{ id: 1, from: '09:00', to: '22:00' },
-      { id: 2, from: '09:00', to: '22:00' },
-      { id: 3, from: '09:00', to: '22:00' }]));
+    ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].forEach(day => this.setDefaultBussinessHoursForWeekDay(day));
+  }
+
+  private setDefaultBussinessHoursForWeekDay(day: string): void {
+    this.formGroup.setControl(day, this.setTimeRangeForm(
+      [
+        { id: 1, from: '09:00', to: '22:00' }
+      ]));
   }
 
   private setTimeRangeForm(ranges: TimePickerRange[]) {
@@ -48,24 +56,6 @@ export class ProductStandardProfileDetailComponent implements OnInit {
       id: range.id,
       from: [range.from, Validators.required],
       to: [range.to, Validators.required]
-    });
-  }
-
-  get sun(): FormArray {
-    return this.formGroup.get('sun') as FormArray;
-  }
-
-  private addTimeRange(content: any): void {
-  }
-
-  private editTimeRange(fg: FormGroup, content: any) {
-
-    this.timeRangeFormGroup = fg;
-
-    this.modalService.open(content).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.validationService.getDismissReason(reason)}`;
     });
   }
 

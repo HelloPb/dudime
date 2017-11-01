@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { ProductStandardProfileDetailComponent } from './product-standard-profile-detail/product-standard-profile-detail.component';
 // tslint:disable-next-line:max-line-length
 import { ProductStandardProfileNavigationComponent } from './product-standard-profile-navigation/product-standard-profile-navigation.component';
+import { WeekDaysBussinessHoursComponent } from './product-standard-profile-detail/week-days-bussiness-hours/week-days-bussiness-hours.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ProductStandardProfileNavigationComponent } from './product-standard-pr
     DateTimePickerModule,
     ProductStandardProfileRoutingModule
   ],
-  declarations: [ProductStandardProfileComponent, ProductStandardProfileDetailComponent, ProductStandardProfileNavigationComponent]
+  declarations: [ProductStandardProfileComponent,
+    ProductStandardProfileDetailComponent, ProductStandardProfileNavigationComponent, WeekDaysBussinessHoursComponent]
 })
 export class ProductStandardProfileModule { }
