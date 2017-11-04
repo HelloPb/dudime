@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        loadChildren: 'app/dev/content/features/profile-products/products.module#ProfileProductsModule'
+        loadChildren: 'app/dev/content/features/products/products.module#ProfileProductsModule'
       },
       {
         path: 'mystore',

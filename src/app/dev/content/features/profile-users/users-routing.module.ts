@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'search',
-        loadChildren: 'app/dev/content/features/profile-users/search-user/search-user.module#SearchUserModule'
+        loadChildren: 'app/dev/content/features/profile-users/user-search/user-search.module#UserSearchModule'
       }
     ]
   }
